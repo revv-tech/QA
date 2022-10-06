@@ -8,10 +8,10 @@ module.exports = {
     },
     {
       descripcion: 'Estudiante'
-    }]);
+    }])
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Tipo_Convocado', null, {});
+    return queryInterface.bulkDelete('Tipo_Convocado', null, {})
   }
-};
+}

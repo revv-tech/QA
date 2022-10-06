@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     nombre: { type: DataTypes.STRING, allowNull: false }
   }, {
     freezeTableName: true
-  });
-  Permiso.associate = function (models) { };
-  return Permiso;
-};
+  })
+  Permiso.associate = function (models) { }
+  return Permiso
+}

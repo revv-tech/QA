@@ -12,7 +12,7 @@ module.exports = {
         references: {
 
           model: {
-            tableName: 'Usuario',
+            tableName: 'Usuario'
           },
           key: 'cedula'
         }
@@ -21,9 +21,9 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Permiso',
+            tableName: 'Permiso'
           },
-          key: 'id_permiso',
+          key: 'id_permiso'
         }
       },
       createdAt: {
@@ -36,9 +36,9 @@ module.exports = {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.fn('now')
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Usuario_Permiso');
+    return queryInterface.dropTable('Usuario_Permiso')
   }
-};
+}

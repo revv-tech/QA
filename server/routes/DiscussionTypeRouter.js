@@ -1,8 +1,8 @@
-const { Router } = require('express');
-const DiscussionTypeController = require('../controllers/DiscussionTypeController');
+const { Router } = require('express')
+const DiscussionTypeController = require('../controllers/DiscussionTypeController')
 
-const router = Router();
+const router = Router()
 
-router.get('/', DiscussionTypeController.getDiscussionTypes);
+router.get('/', DiscussionTypeController.getDiscussionTypes)
 
-module.exports = router;
+module.exports = router

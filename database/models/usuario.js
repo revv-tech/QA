@@ -6,7 +6,9 @@ module.exports = (sequelize, DataTypes) => {
     segundo_apellido: { type: DataTypes.STRING, allowNull: false },
     clave: { type: DataTypes.STRING, allowNull: false },
     id_tipo_convocado: {
-      type: DataTypes.INTEGER, allowNull: false, references: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
         model: {
           tableName: 'Tipo_Convocado'
         },
@@ -15,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     freezeTableName: true
-  });
-  Usuario.associate = function (models) { };
-  return Usuario;
-};
+  })
+  Usuario.associate = function (models) { }
+  return Usuario
+}

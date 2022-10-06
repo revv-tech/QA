@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING,
         references: {
           model: {
-            tableName: 'Consejo',
+            tableName: 'Consejo'
           },
           key: 'consecutivo'
         }
@@ -59,9 +59,9 @@ module.exports = {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.fn('now')
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Punto');
+    return queryInterface.dropTable('Punto')
   }
-};
+}

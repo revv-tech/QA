@@ -5,10 +5,10 @@ module.exports = {
     },
     {
       nombre: 'Gestionar Consejos'
-    }]);
+    }])
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Permiso', null, {});
+    return queryInterface.bulkDelete('Permiso', null, {})
   }
-};
+}

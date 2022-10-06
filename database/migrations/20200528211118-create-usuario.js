@@ -20,7 +20,7 @@ module.exports = {
       },
       clave: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       id_tipo_convocado: {
         type: Sequelize.INTEGER,
@@ -42,9 +42,9 @@ module.exports = {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.fn('now')
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Usuario');
+    return queryInterface.dropTable('Usuario')
   }
-};
+}

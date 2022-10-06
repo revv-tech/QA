@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Punto',
+            tableName: 'Punto'
           },
           key: 'id_punto'
         }
@@ -31,9 +31,9 @@ module.exports = {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.fn('now')
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Archivo_Punto');
+    return queryInterface.dropTable('Archivo_Punto')
   }
-};
+}

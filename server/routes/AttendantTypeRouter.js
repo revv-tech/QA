@@ -1,8 +1,8 @@
-const { Router } = require('express');
-const AttendantTypeController = require('../controllers/AttendantTypeController');
+const { Router } = require('express')
+const AttendantTypeController = require('../controllers/AttendantTypeController')
 
-const router = Router();
+const router = Router()
 
-router.get('/', AttendantTypeController.getAttendantTypes);
+router.get('/', AttendantTypeController.getAttendantTypes)
 
-module.exports = router;
+module.exports = router
