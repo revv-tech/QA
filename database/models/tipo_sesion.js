@@ -4,9 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     descripcion: { type: DataTypes.STRING, allowNull: false }
   }, {
     freezeTableName: true
-  });
+  })
   Tipo_Sesion.associate = function (models) {
     // associations can be defined here
-  };
-  return Tipo_Sesion;
-};
+  }
+  return Tipo_Sesion
+}

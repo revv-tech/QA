@@ -2,7 +2,9 @@ module.exports = (sequelize, DataTypes) => {
   const Consejo = sequelize.define('Consejo', {
     consecutivo: { type: DataTypes.STRING, primaryKey: true, allowNull: false },
     id_tipo_sesion: {
-      type: DataTypes.INTEGER, allowNull: false, references: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
         model: {
           tableName: 'Tipo_Sesion'
         },
@@ -19,9 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     editable: { type: DataTypes.BOOLEAN, allowNull: false }
   }, {
     freezeTableName: true
-  });
+  })
   Consejo.associate = function (models) {
     // associations can be defined here
-  };
-  return Consejo;
-};
+  }
+  return Consejo
+}

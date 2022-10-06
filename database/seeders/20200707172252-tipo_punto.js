@@ -5,10 +5,10 @@ module.exports = {
     },
     {
       descripcion: 'Informativo'
-    }]);
+    }])
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Tipo_Punto', null, {});
+    return queryInterface.bulkDelete('Tipo_Punto', null, {})
   }
-};
+}

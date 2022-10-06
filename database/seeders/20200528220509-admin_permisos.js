@@ -7,10 +7,10 @@ module.exports = {
     {
       cedula: '1234',
       id_permiso: 2
-    }]);
+    }])
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Usuario_Permiso', null, {});
+    return queryInterface.bulkDelete('Usuario_Permiso', null, {})
   }
-};
+}

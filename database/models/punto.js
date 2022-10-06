@@ -2,7 +2,9 @@ module.exports = (sequelize, DataTypes) => {
   const Punto = sequelize.define('Punto', {
     id_punto: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
     consecutivo: {
-      type: DataTypes.STRING, allowNull: false, references: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
         model: {
           tableName: 'Consejo'
         },
@@ -13,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     orden: { type: DataTypes.INTEGER, allowNull: false },
     cedula: { type: DataTypes.STRING, allowNull: false },
     id_tipo_punto: {
-      type: DataTypes.INTEGER, allowNull: false, references: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
         model: {
           tableName: 'Tipo_Punto'
         },
@@ -21,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     id_estado_punto: {
-      type: DataTypes.INTEGER, allowNull: false, references: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
         model: {
           tableName: 'Estado_Punto'
         },
@@ -30,9 +36,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     freezeTableName: true
-  });
+  })
   Punto.associate = function (models) {
     // associations can be defined here
-  };
-  return Punto;
-};
+  }
+  return Punto
+}

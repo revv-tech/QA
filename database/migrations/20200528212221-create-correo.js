@@ -11,7 +11,7 @@ module.exports = {
         type: Sequelize.STRING,
         references: {
           model: {
-            tableName: 'Usuario',
+            tableName: 'Usuario'
           },
           key: 'cedula'
         }
@@ -26,9 +26,9 @@ module.exports = {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.fn('now')
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Correo');
+    return queryInterface.dropTable('Correo')
   }
-};
+}

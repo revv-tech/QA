@@ -21,9 +21,9 @@ module.exports = {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.fn('now')
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Tipo_Punto');
+    return queryInterface.dropTable('Tipo_Punto')
   }
-};
+}

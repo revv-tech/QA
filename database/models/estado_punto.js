@@ -4,9 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     descripcion: { type: DataTypes.STRING, allowNull: false }
   }, {
     freezeTableName: true
-  });
+  })
   Estado_Punto.associate = function (models) {
     // associations can be defined here
-  };
-  return Estado_Punto;
-};
+  }
+  return Estado_Punto
+}

@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     freezeTableName: true,
     timestamps: false
-  });
-  Link.associate = function (models) { };
-  return Link;
-};
+  })
+  Link.associate = function (models) { }
+  return Link
+}

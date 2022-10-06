@@ -8,10 +8,10 @@ module.exports = {
     },
     {
       descripcion: 'rechazado'
-    }]);
+    }])
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Estado_Punto', null, {});
+    return queryInterface.bulkDelete('Estado_Punto', null, {})
   }
-};
+}

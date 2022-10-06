@@ -5,13 +5,13 @@ module.exports = {
     },
     {
       descripcion: 'Extraordinaria'
-    }
-      , {
+    },
+    {
       descripcion: 'Consulta Formal'
-    }]);
+    }])
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Tipo_Sesion', null, {});
+    return queryInterface.bulkDelete('Tipo_Sesion', null, {})
   }
-};
+}

@@ -1,8 +1,8 @@
-const { Router } = require('express');
-const CouncilTypeController = require('../controllers/CouncilTypeController');
+const { Router } = require('express')
+const CouncilTypeController = require('../controllers/CouncilTypeController')
 
-const router = Router();
+const router = Router()
 
-router.get('/', CouncilTypeController.getCouncilTypes);
+router.get('/', CouncilTypeController.getCouncilTypes)
 
-module.exports = router;
+module.exports = router

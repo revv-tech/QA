@@ -27,9 +27,9 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Link');
+    return queryInterface.dropTable('Link')
   }
-};
+}
