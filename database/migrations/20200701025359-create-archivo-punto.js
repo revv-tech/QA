@@ -1,39 +1,39 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Archivo_Punto', {
+    return queryInterface.createTable("Archivo_Punto", {
       id_archivo_punto: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       id_punto: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Punto',
+            tableName: "Punto",
           },
-          key: 'id_punto'
-        }
+          key: "id_punto",
+        },
       },
       direccion: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATEONLY,
-        defaultValue: Sequelize.fn('now')
+        defaultValue: Sequelize.fn("now"),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATEONLY,
-        defaultValue: Sequelize.fn('now')
-      }
+        defaultValue: Sequelize.fn("now"),
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Archivo_Punto');
-  }
+    return queryInterface.dropTable("Archivo_Punto");
+  },
 };

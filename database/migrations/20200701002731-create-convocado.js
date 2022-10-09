@@ -1,43 +1,43 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Convocado', {
+    return queryInterface.createTable("Convocado", {
       id_convocado: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       consecutivo: {
         allowNull: false,
         type: Sequelize.STRING,
         references: {
           model: {
-            tableName: 'Consejo',
+            tableName: "Consejo",
           },
-          key: 'consecutivo'
-        }
+          key: "consecutivo",
+        },
       },
       cedula: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       limite_solicitud: {
         allowNull: false,
-        type: Sequelize.DATEONLY
+        type: Sequelize.DATEONLY,
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATEONLY,
-        defaultValue: Sequelize.fn('now')
+        defaultValue: Sequelize.fn("now"),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATEONLY,
-        defaultValue: Sequelize.fn('now')
-      }
+        defaultValue: Sequelize.fn("now"),
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Convocado');
-  }
+    return queryInterface.dropTable("Convocado");
+  },
 };
