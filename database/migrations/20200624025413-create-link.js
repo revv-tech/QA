@@ -1,35 +1,35 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Link', {
+    return queryInterface.createTable("Link", {
       id_link: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       token: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       expiration: {
         allowNull: false,
-        type: Sequelize.BIGINT
+        type: Sequelize.BIGINT,
       },
       id_permiso: {
         type: Sequelize.INTEGER,
-        allowNull: true
+        allowNull: true,
       },
       id_tipo_convocado: {
         type: Sequelize.INTEGER,
-        allowNull: true
+        allowNull: true,
       },
       cedula: {
         type: Sequelize.STRING,
-        allowNull: true
-      }
+        allowNull: true,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Link');
-  }
+    return queryInterface.dropTable("Link");
+  },
 };

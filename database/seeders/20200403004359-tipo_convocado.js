@@ -1,17 +1,19 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Tipo_Convocado', [{
-      descripcion: 'Docente'
-    },
-    {
-      descripcion: 'Administrativo'
-    },
-    {
-      descripcion: 'Estudiante'
-    }]);
+    return queryInterface.bulkInsert("Tipo_Convocado", [
+      {
+        descripcion: "Docente",
+      },
+      {
+        descripcion: "Administrativo",
+      },
+      {
+        descripcion: "Estudiante",
+      },
+    ]);
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Tipo_Convocado', null, {});
-  }
+    return queryInterface.bulkDelete("Tipo_Convocado", null, {});
+  },
 };
